@@ -7,7 +7,7 @@ namespace Activity4._4._3
         private readonly string _name;
         private double _played;
         private readonly double _length;
-        private bool _rented;
+        public bool Rented {set; get;}
 
 
         public VHSTape()
@@ -18,7 +18,7 @@ namespace Activity4._4._3
         {
             this._name = name;
             this._length = length;
-            this._rented = false;
+            this.Rented = false;
             this._played = 0.0;
         }
         public void Play(double time)
@@ -45,5 +45,6 @@ namespace Activity4._4._3
         {
             return this._length;
         }
+        
     }
 }
