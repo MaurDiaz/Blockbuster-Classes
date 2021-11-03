@@ -37,5 +37,13 @@ namespace Activity4._4._3
                 this._played = 0.0;
             }
         }
+        public string GetName()
+        {
+            return this._name;
+        }
+        public double GetLength()
+        {
+            return this._length;
+        }
     }
 }
