@@ -9,11 +9,6 @@ namespace Activity4._4._3
         private readonly double _length;
         public bool Rented {set; get;}
 
-
-        public VHSTape()
-        {
-
-        }
         public VHSTape(string name, double length)
         {
             this._name = name;
