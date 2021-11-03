@@ -4,8 +4,9 @@ namespace Activity4._4._3
 {
     class VHSTape
     {
-        private string _name;
-        private double _length, _played;
+        private readonly string _name;
+        private double _played;
+        private readonly double _length;
         private bool _rented;
 
 
@@ -23,10 +24,17 @@ namespace Activity4._4._3
         public void Play(double time)
         {
             this._played += time;
-
-            if (this._played > this._length) 
+            if(this._played > this._length) 
             {
                 this._played = this._length;
+            }
+        }
+        public void Rewind(double time)
+        {
+            this._played -= time;
+            if(this._played < 0.0)
+            {
+                this._played = 0.0;
             }
         }
     }
