@@ -7,7 +7,9 @@ namespace Activity4._4._3
     {
         static void Main(string[] args)
         {
-            //VHSTape movie = new VHSTape();
+            VHSTape m1 = new VHSTape("Up", 96);
+            VHSTape m2 = new VHSTape("Ali", 157);
+            VHSTape m3 = new VHSTape("", );
         }
     }
 }

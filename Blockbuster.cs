@@ -61,5 +61,18 @@ namespace Activity4._4._3
             }
             return null;     
         }
+        public void Return(string title)
+        {
+            foreach(VHSTape movie in this.ListOfMovies)
+            {
+                if(title == movie.GetName())
+                {
+                    if(movie.Rented)
+                    {
+                        movie.Rented = false;
+                    }
+                }
+            }
+        }
     }
 }
