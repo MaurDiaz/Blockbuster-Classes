@@ -55,7 +55,7 @@ namespace Activity4._4._3
                     if(!movie.Rented)
                     {
                         movie.Rented = true;
-                        return new VHSTape(movie.GetName(),movie.GetLength());
+                        return new VHSTape(movie.GetName(), (int)movie.GetLength());
                     }
                 }
             }
