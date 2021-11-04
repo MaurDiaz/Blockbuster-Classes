@@ -7,7 +7,7 @@ namespace Activity4._4._3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //VHSTape movie = new VHSTape();
         }
     }
 }

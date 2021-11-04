@@ -32,11 +32,11 @@ namespace Activity4._4._3
             }
             return false;
         }
-        public bool CheckAvailability(string tittle)
+        public bool CheckAvailability(string title)
         {
             foreach(VHSTape movie in this.ListOfMovies)
             {
-                if(tittle == movie.GetName())
+                if(title == movie.GetName())
                 {
                     if(!movie.Rented)
                     {
@@ -45,6 +45,21 @@ namespace Activity4._4._3
                 }
             }
             return false;
+        }
+        public VHSTape Rent(string title)
+        {
+            foreach(VHSTape movie in this.ListOfMovies)
+            {
+                if(title == movie.GetName())
+                {
+                    if(!movie.Rented)
+                    {
+                        movie.Rented = true;
+                        return new VHSTape(movie.GetName(),movie.GetLength());
+                    }
+                }
+            }
+            return null;     
         }
     }
 }
