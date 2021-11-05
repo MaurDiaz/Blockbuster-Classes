@@ -5,7 +5,7 @@ namespace Activity4._4._3
 {
     class Blockbuster
     {
-        private List<VHSTape> ListOfMovies {get; set;}
+        public List<VHSTape> ListOfMovies {get; set;}
         private string _address;
 
         public Blockbuster()
