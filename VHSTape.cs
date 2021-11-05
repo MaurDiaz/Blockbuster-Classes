@@ -40,7 +40,7 @@ namespace Activity4._4._3
         {
             return this._name;
         }
-        public double GetLength()
+        public int GetLength()
         {
             return this._length;
         }
