@@ -21,7 +21,7 @@ namespace Activity4._4._3
         {
             this.ListOfMovies.Add(newMovie);
         }
-        public bool CheckCatalog(string title)
+        public bool LookUp(string title)
         {
             foreach(VHSTape movie in this.ListOfMovies)
             {
@@ -59,7 +59,7 @@ namespace Activity4._4._3
                     }
                 }
             }
-            return null;     
+            return new VHSTape();     
         }
         public void Return(string title)
         {

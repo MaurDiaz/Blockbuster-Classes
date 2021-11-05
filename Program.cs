@@ -21,6 +21,9 @@ namespace Activity4._4._3
             VHSTape m10 = new VHSTape("Spy", 120);
             VHSTape m11 = new VHSTape("Up", 96);
             VHSTape m12 = new VHSTape("It", 135);
+            VHSTape m13 = new VHSTape("Up", 96);
+            VHSTape rentedMovie = new VHSTape(); // returned object when a movie is rented
+            VHSTape empty = new VHSTape(); // empty object when try to rent a movie not available
 
             Debug.Assert(m1.GetName() == "Up");
             Debug.Assert(m1.GetLength() == 96);
@@ -45,8 +48,24 @@ namespace Activity4._4._3
             lastRemaining.AddMovie(m10);
             lastRemaining.AddMovie(m11);
             lastRemaining.AddMovie(m12);
+            lastRemaining.AddMovie(m13);
 
             Debug.Assert(lastRemaining.ListOfMovies[1].GetName() == "Ali");
+            Debug.Assert(lastRemaining.LookUp("Yes") == false);
+            Debug.Assert(lastRemaining.LookUp("JFK") == true);
+
+            rentedMovie = lastRemaining.Rent("Ed");
+            Debug.Assert(m6.Rented == true);
+            Debug.Assert(rentedMovie.GetName() == "Ed");
+
+            empty = lastRemaining.Rent("Ed");
+            Debug.Assert(empty.GetName() == null);
+
+            Debug.Assert(lastRemaining.CheckAvailability("Ed") == false);
+            Debug.Assert(lastRemaining.CheckAvailability("Saw") == true);
+
+
+
             
 
 
