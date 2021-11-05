@@ -24,7 +24,7 @@ namespace Activity4._4._3
             
             VHSTape rentedMovie = new VHSTape(); // returned object when a movie is rented
             VHSTape empty = new VHSTape(); // empty object when trying to rent a movie that is not available
-            VHSTape rentedMovie2 = new VHSTape();
+            VHSTape rentedMovie2 = new VHSTape(); // returned object when a movie is rented
 
             Debug.Assert(m1.GetName() == "Up");
             Debug.Assert(m1.GetLength() == 96);
@@ -81,16 +81,6 @@ namespace Activity4._4._3
 
             Debug.Assert(m7.Rented == false);
             Debug.Assert(m12.Rented == true);
-
-
-
-            
-
-
-
-
-
-
         }
     }
 }
