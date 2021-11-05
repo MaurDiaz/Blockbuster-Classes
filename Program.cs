@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+
 
 namespace Activity4._4._3
 {
@@ -19,6 +21,13 @@ namespace Activity4._4._3
             VHSTape m10 = new VHSTape("Spy", 120);
             VHSTape m11 = new VHSTape("Up", 96);
             VHSTape m12 = new VHSTape("It", 135);
+            Debug.Assert(m1.GetName() == "Up");
+            Debug.Assert(m1.GetLength() == 96);
+            Debug.Assert(m1.Rented == false);
+            m1.Play(97);
+            m1.Rewind(100);
+
+
 
         }
     }

@@ -12,9 +12,9 @@ namespace Activity4._4._3
         {
 
         }
-        public Blockbuster(List<VHSTape> newList, string address)
+        public Blockbuster(string address)
         {
-            this.ListOfMovies = newList;
+            this.ListOfMovies = new List<VHSTape>();
             this._address = address;
         }
         public void AddMovie(VHSTape newMovie)
