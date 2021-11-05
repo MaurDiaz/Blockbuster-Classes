@@ -70,6 +70,7 @@ namespace Activity4._4._3
                     if(movie.Rented)
                     {
                         movie.Rented = false;
+                        break;
                     }
                 }
             }

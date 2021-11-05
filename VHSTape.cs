@@ -5,13 +5,13 @@ namespace Activity4._4._3
     class VHSTape
     {
         private readonly string _name;
-        public int _played;
+        private int _played;
         private readonly int _length;
         public bool Rented {set; get;}
 
         public VHSTape()
         {
-            
+
         }
         public VHSTape(string name, int length)
         {

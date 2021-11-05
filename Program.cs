@@ -21,20 +21,22 @@ namespace Activity4._4._3
             VHSTape m10 = new VHSTape("Spy", 120);
             VHSTape m11 = new VHSTape("Up", 96);
             VHSTape m12 = new VHSTape("It", 135);
-            VHSTape m13 = new VHSTape("Up", 96);
+            
             VHSTape rentedMovie = new VHSTape(); // returned object when a movie is rented
-            VHSTape empty = new VHSTape(); // empty object when try to rent a movie not available
+            VHSTape empty = new VHSTape(); // empty object when trying to rent a movie that is not available
+            VHSTape rentedMovie2 = new VHSTape();
 
             Debug.Assert(m1.GetName() == "Up");
             Debug.Assert(m1.GetLength() == 96);
             Debug.Assert(m1.Rented == false);
-            Debug.Assert(m1._played == 0); // field '_played' made public to test it
+            //Debug.Assert(m1._played == 0); // field '_played' made public to test it
             m1.Play(97);
-            Debug.Assert(m1._played == 96); // field '_played' made public to test it
+            //Debug.Assert(m1._played == 96); // field '_played' made public to test it
             m1.Rewind(100);
-            Debug.Assert(m1._played == 0); // field '_played' made public to test it
+            //Debug.Assert(m1._played == 0); // field '_played' made public to test it
 
             Blockbuster lastRemaining = new Blockbuster("211 NE Revere Ave, Bend, OR 97701, United States");
+            //Debug.Assert(lastRemaining._address == "211 NE Revere Ave, Bend, OR 97701, United States");
 
             lastRemaining.AddMovie(m1);
             lastRemaining.AddMovie(m2);
@@ -48,9 +50,9 @@ namespace Activity4._4._3
             lastRemaining.AddMovie(m10);
             lastRemaining.AddMovie(m11);
             lastRemaining.AddMovie(m12);
-            lastRemaining.AddMovie(m13);
 
             Debug.Assert(lastRemaining.ListOfMovies[1].GetName() == "Ali");
+            Debug.Assert(lastRemaining.ListOfMovies[9].GetName() == "Spy");
             Debug.Assert(lastRemaining.LookUp("Yes") == false);
             Debug.Assert(lastRemaining.LookUp("JFK") == true);
 
@@ -63,6 +65,22 @@ namespace Activity4._4._3
 
             Debug.Assert(lastRemaining.CheckAvailability("Ed") == false);
             Debug.Assert(lastRemaining.CheckAvailability("Saw") == true);
+
+            lastRemaining.Return("Ed");
+
+            Debug.Assert(m6.Rented == false);
+
+            rentedMovie = lastRemaining.Rent("It");
+            rentedMovie2 = lastRemaining.Rent("It");
+            Debug.Assert(rentedMovie.GetLength() == rentedMovie2.GetLength());
+
+            Debug.Assert(m7.Rented == true);
+            Debug.Assert(m12.Rented == true);
+
+            lastRemaining.Return("It");
+
+            Debug.Assert(m7.Rented == false);
+            Debug.Assert(m12.Rented == true);
 
 
 
